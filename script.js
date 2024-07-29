@@ -9,16 +9,18 @@ const perguntas = [
         enunciado: "Como podemos contribuir para ajudar o Rio Grande do Sul durante a crise?",
         alternativas: [
             {
-                texto: " A) Doando para instituições de caridade locais.",
-                afirmacao: "afirmação"
+                texto: "a) Doando para instuições de caridade locais.",
+                afirmacao: "Correto!"
             },
             {
-                texto: "B) Enviando produtos de segunda mão sem utilidade.",
-                afirmacao: "afirmação"
+                texto: "b) Enviando produto de segunda mão sem utilidade.",
+                afirmacao: "Errado!"
             }
         ]
     },
-  
+];
+
+
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
@@ -45,13 +47,13 @@ function mostraAlternativas(){
 
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    historiaFinal += afirmacoes + "";
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
